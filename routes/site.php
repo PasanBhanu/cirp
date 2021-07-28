@@ -55,12 +55,12 @@ Route::group(
 
 			Route::get('get-read-more-post','ArticleController@getReadMorePost');
 
-			Route::get('404', function () {
-			    return view('site.pages.404');
-			});
-			Route::get('403', function () {
-			    return view('site.pages.403');
-			});
+//			Route::get('404', function () {
+//			    return view('site.pages.404');
+//			});
+//			Route::get('403', function () {
+//			    return view('site.pages.403');
+//			});
 		});
 		Route::group(['prefix' => $article], function(){
 		    Route::get('/{id}', 'ArticleController@show')->name('article.detail');
